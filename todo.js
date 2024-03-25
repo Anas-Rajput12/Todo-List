@@ -6,7 +6,7 @@ while (loop) {
         {
             name: "TODO",
             type: "input",
-            message: "Enter your Todo",
+            message: "Enter your Todo :",
         },
         {
             name: "Addmore",
