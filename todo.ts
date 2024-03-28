@@ -1,5 +1,18 @@
+#!  /usr/bin/env node
 import inquirer from "inquirer";
+import chakAnimation from "chalk-animation";
 
+const sleep = ()=>{
+    return new Promise((res)=>{
+      setTimeout(res, 2000);
+    })}
+  
+async function atm() {
+    let rainbow = chakAnimation.rainbow(`let Start Todo List`);
+    await sleep ();
+    rainbow.stop();
+}
+atm();
 let todos : string[] = [];
 let loop = true;
 
@@ -25,7 +38,7 @@ while (loop) {
     }else{
         console.log("kindly Add valid input");
     }
-}
+
 
 if (todos.length > 0) {
     console.log("Your Todo List ");
@@ -34,4 +47,5 @@ if (todos.length > 0) {
     });
 }else{
     console.log("No Todo Found");
+}
 }
